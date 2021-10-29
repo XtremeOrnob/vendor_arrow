@@ -1,34 +1,42 @@
-<img src="https://github.com/ArrowOS/getting_started/blob/master/misc/logo.png?raw=true">
+# ArrowOS Vendor MOD (Stuff taken from ProtonAOSP)
 
-# ArrowOS
+To use this as your arrow vendor, use command:
 
- Getting Started
----------------
-To get started with the ArrowOS sources, you'll need to get
-familiar with:
+(Change directory to root of arrow source first)
 
- [Git and Repo](https://source.android.com/setup/build/downloading)
+```bash
+rm -rf vendor/arrow && git clone https://github.com/XtremeOrnob/vendor_arrow -b arrow-12 vendor/arrow && rm -rf vendor/gapps && git clone https://gitlab.com/beingmishra/platform_vendor_gms -b 12 --depth=1 vendor/gms
+```
+Also for the sake of everyone's sanity, clone ProtonAOSP's version of Launcher3
+
+```bash
+rm -rf packages/apps/Launcher3 && git clone https://github.com/ProtonAOSP/android_packages_apps_Launcher3 -b sc packages/apps/Launcher3
+```
+
+Please do
+
+```bash
+make installclean
+```
+
+Oh yeah almost forgot; do this or add it in your arrow_device.mk file
+
  
- [Establishing a Build Environment](https://source.android.com/setup/build/initializing)
-
-To initialize your local repository, use command:
-
 ```bash
-    repo init -u https://github.com/ArrowOS/android_manifest.git -b arrow-9.x
+export ARROW_GAPPS=true
 ```
 
-Then sync up:
+otherwise this won't work
 
-```bash
-    repo sync  -f --force-sync --no-clone-bundle -jX
-```
-Where X is the thread your CPU can handle.
 
-For building instructions, please check :
 
-[ How to Compile ArrowOS from source for your Android Device](https://blog.arrowos.net/posts/compilation-guide)
 
-To apply for maintainership, please check :
+# Thanks to
 
-[Apply for Official Maintainership](https://blog.arrowos.net/posts/apply-for-maintainership)
+@beingmishra, OctaviOS
 
+@kdrag0n, ProtonAOSP
+
+LineageOS
+
+And me, please thank me. XD
