@@ -7,10 +7,14 @@ To use this as your arrow vendor, use command:
 ```bash
 rm -rf vendor/arrow && git clone https://github.com/XtremeOrnob/vendor_arrow -b arrow-12 vendor/arrow && rm -rf vendor/gapps && git clone https://gitlab.com/beingmishra/platform_vendor_gms -b 12 --depth=1 vendor/gms
 ```
-Also for the sake of everyone's sanity, clone ProtonAOSP's version of Launcher3
+Also for the sake of everyone's sanity, clone ProtonAOSP's version of Launcher3 and ThemePicker as we go
 
 ```bash
 rm -rf packages/apps/Launcher3 && git clone https://github.com/ProtonAOSP/android_packages_apps_Launcher3 -b sc packages/apps/Launcher3
+```
+
+```bash
+rm -rf packages/apps/ThemePicker && git clone https://github.com/ProtonAOSP/android_packages_apps_ThemePicker -b sc packages/apps/ThemePicker
 ```
 
 Please do
