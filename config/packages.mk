@@ -20,7 +20,6 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3QuickStep \
     messaging \
-    SimpleGallery \
     Stk \
     stats \
     ThemePicker \
@@ -31,7 +30,8 @@ PRODUCT_PACKAGES += \
 ifneq ($(ARROW_GAPPS),true)
 PRODUCT_PACKAGES += \
     SimpleCalendar \
-    DuckDuckGo
+    DuckDuckGo \
+    SimpleGallery
 endif
 
 # SystemUI plugins
